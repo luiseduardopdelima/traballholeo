@@ -32,36 +32,33 @@ describe('Acesso ao sistema de teste', () => {
   });
   
   it('Verificar a página da reserva', () => {
-
     cy.visit('https://projetohotelaria.000webhostapp.com/index.php');
-    cy.xpath('/html/body/section[2]/div/div/div[2]/a[2]').click();
-    cy.url().should('eq', 'https://projetohotelaria.000webhostapp.com/quartos/paginaquarto1.php').then((url) => {
-        if (url === 'https://projetohotelaria.000webhostapp.com/quartos/paginaquarto1.php') {
-            cy.log('Alerta 1: A URL é correta.');
-        } else {
-            cy.log('Alerta 2: A URL não é a esperada.');
-        }
-    });//Se falhar, houve o carregamento de uma inserção nova de quarto que não há direcionamento para a página de reserva.
-    
-});
-
-
-  it('Realizar a reserva', () => {
-    
-    cy.visit('https://projetohotelaria.000webhostapp.com/quartos/paginaquarto3.php');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[1]/input').type('Leonardo Flores Maus');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[2]/input').type('2');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[3]/input').type('51 99999-9999');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[4]/input').type('teste@teste.com');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[5]/select').select('Cartão de Débito');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[6]/input').type('2023-01-01');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[7]/input').type('2023-01-01');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[8]/input').type('1');
-    cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[2]/button').click();
-
+    cy.contains('Ver Detalhes').first().click();
+  
+    cy.url().then((url) => {
+      if (url === 'https://projetohotelaria.000webhostapp.com/index.php') {
+        cy.log('Alerta 1: A URL é correta.');
+      } else {
+        cy.log('Alerta 2: A URL não é a esperada.');
+      }
+    });
   });
+  //Se falhar, houve o carregamento de uma inserção nova de quarto que não há direcionamento para a página de reserva.
 
+    it('Realizar a reserva', () => {
+    
+      cy.visit('https://projetohotelaria.000webhostapp.com/quartos/paginaquarto3.php');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[1]/input').type('Leonardo Flores Maus');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[2]/input').type('2');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[3]/input').type('51 99999-9999');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[4]/input').type('teste@teste.com');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[5]/select').select('Cartão de Débito');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[6]/input').type('2023-01-01');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[7]/input').type('2023-01-01');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[1]/div[8]/input').type('1');
+      cy.xpath('/html/body/div[1]/div/section/div/div/div/form/div[2]/button').click();
+  
+    });
 });
-
   
 
