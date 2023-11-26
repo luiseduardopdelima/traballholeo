@@ -1,0 +1,11 @@
+Ao realizar a reserva foi permitido no nome colocar numeral.
+Ao realizar a reserva, o número de hóspedes ficou livre, poderia ter uma limitação.
+Ao realizar a reserva, o campo TELEFONE permitiu caracteres do tipo texto.
+Ao realiazr a reserva, a Data de Check-In foi muito maior que 2023/2024 ano colocado na imagem.
+Ao realiazr a reserva, a Data de Check-Out foi muito maior que 2023/2024 ano colocado na imagem e menor que a data de Check-In.
+Ao realizar a inserção de um quarto novo o campo TIPO DO QUARTO permiti entrada null.
+Ao realizar a inserção de um quarto novo o campo PREÇO DO QUARTO permiti entrada null.
+Ao realizar a inserção de um quarto novo o campo DISPONIBILIDADE DE ENTRADA permiti entrada null.
+Ao realizar a inserção de um quarto novo o campo DISPONIBILIDADE DE SAIDA entrada null.
+Ao realizar a inserção de um quarto novo o anexo permiti entrada null.
+Como ADMIN não permiti a exclusão de um dado inserido.

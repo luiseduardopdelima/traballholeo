@@ -1,0 +1,73 @@
+Reserva de Quartos:
+
+Cenário: Um usuário tenta reservar um quarto para um período específico.
+Passos:
+Acesse a página de reserva.
+Escolha as datas desejadas.
+Selecione o tipo de quarto.
+Preencha as informações do hóspede.
+Verifique se a reserva é confirmada corretamente.
+Gestão de Estoque de Quartos:
+
+Cenário: Garantir que o sistema atualize corretamente a disponibilidade de quartos após uma reserva.
+Passos:
+Verifique a disponibilidade de quartos para um período específico.
+Faça uma reserva para esse período.
+Verifique se a disponibilidade de quartos é reduzida corretamente.
+Check-in e Check-out:
+
+Cenário: Um hóspede faz o check-in e check-out com sucesso.
+Passos:
+Realize o check-in do hóspede.
+Verifique se as informações do hóspede estão corretas.
+Realize o check-out do hóspede.
+Garanta que a conta seja calculada corretamente.
+Reservas Concorrentes:
+
+Cenário: Dois usuários tentam reservar o mesmo quarto para o mesmo período simultaneamente.
+Passos:
+Usuário A inicia o processo de reserva.
+Antes de concluir, Usuário B tenta reservar o mesmo quarto para as mesmas datas.
+Garanta que o sistema gerencie corretamente esse conflito.
+Políticas de Cancelamento:
+
+Cenário: Um usuário tenta cancelar uma reserva dentro do prazo permitido.
+Passos:
+Faça uma reserva.
+Tente cancelar a reserva antes e depois do prazo permitido.
+Verifique se as políticas de cancelamento são aplicadas corretamente.
+Pagamento de Reserva:
+
+Cenário: Um usuário realiza um pagamento online para confirmar a reserva.
+Passos:
+Faça uma reserva.
+Escolha a opção de pagamento online.
+Realize o pagamento.
+Confirme se o status da reserva é atualizado corretamente.
+Gestão de Promoções:
+
+Cenário: Aplicação bem-sucedida de uma promoção ou desconto.
+Passos:
+Verifique as promoções atuais.
+Faça uma reserva durante um período promocional.
+Confirme se o desconto é aplicado corretamente.
+Acessibilidade:
+
+Cenário: Teste de usabilidade para usuários com necessidades especiais.
+Passos:
+Utilize ferramentas de acessibilidade para navegar pelo sistema.
+Verifique se todas as funcionalidades são acessíveis por meio de teclado.
+Garanta que informações importantes sejam comunicadas adequadamente para usuários com deficiência visual.
+Segurança de Dados:
+
+Cenário: Garantir que os dados dos hóspedes sejam seguros.
+Passos:
+Faça uma reserva.
+Verifique se as informações do hóspede são armazenadas de forma segura.
+Teste a segurança nas comunicações, especialmente durante o pagamento online.
+Integração com Terceiros:
+
+Cenário: Teste de integração com sistemas externos (por exemplo, sistemas de pagamento, serviços de mapas para localização do hotel).
+Passos:
+Simule transações de pagamento com um sistema externo.
+Verifique se a localização do hotel no mapa é precisa e atualizada.
