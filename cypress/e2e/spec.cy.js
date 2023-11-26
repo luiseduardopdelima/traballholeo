@@ -30,15 +30,21 @@ describe('Acesso ao sistema de teste', () => {
     cy.xpath('/html/body/section/div/div/div[4]/form[2]/button').click();
 
   });
-
+  
   it('Verificar a página da reserva', () => {
-    
+
     cy.visit('https://projetohotelaria.000webhostapp.com/index.php');
     cy.xpath('/html/body/section[2]/div/div/div[2]/a[2]').click();
-    cy.url().should('eq','https://projetohotelaria.000webhostapp.com/quartos/paginaquarto1.php')
-    //Se falhar, houve o carregamento de uma inserção nova de quarto que não há direcionamento para a página de reserva.
+    cy.url().should('eq', 'https://projetohotelaria.000webhostapp.com/quartos/paginaquarto1.php').then((url) => {
+        if (url === 'https://projetohotelaria.000webhostapp.com/quartos/paginaquarto1.php') {
+            cy.log('Alerta 1: A URL é correta.');
+        } else {
+            cy.log('Alerta 2: A URL não é a esperada.');
+        }
+    });//Se falhar, houve o carregamento de uma inserção nova de quarto que não há direcionamento para a página de reserva.
+    
+});
 
-  });
 
   it('Realizar a reserva', () => {
     
